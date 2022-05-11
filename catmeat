@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ -z "$1" ];then
+  echo "No file/comment pattern specified, usage:"
+  echo "catmeat /path/to/file [DELIM]"
+  echo "eg."
+  echo "catmeat /etc/fstab #"
+  exit 0
+fi
+
+if [ -z "$2" ];then
+  DELIM="#"
+else
+  DELIM="$2"
+fi
+
+cat $1 | egrep -v "^\s*($|$DELIM)"
