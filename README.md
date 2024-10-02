@@ -15,4 +15,6 @@ if no [DELIM] is specified, it will default to "#"
 
 Install with (as root):
 
+```
 wget https://raw.githubusercontent.com/NTchrist/catmeat/main/catmeat -O /usr/bin/catmeat; chmod +x /usr/bin/catmeat
+```
